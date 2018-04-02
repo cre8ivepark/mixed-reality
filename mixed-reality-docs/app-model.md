@@ -13,7 +13,7 @@ keywords: UWP, app model, lifecycle, suspend, resume, tile, views, contracts
 Windows Mixed Reality uses the app model provided by the [Universal Windows Platform](https://docs.microsoft.com/windows/uwp/get-started/) (UWP), a model and environment for modern Windows apps. The UWP app model defines how apps are installed, updated, versioned and removed safely and completely. It governs the application life cycle - how apps execute, sleep and terminate - and how they can preserve state. It also covers integration and interaction with the operating system, files and other apps.
 
 ![2D apps arranged in the Windows Mixed Reality home in a breakfast area](images/20160112-055908-hololens-500px.jpg)<br>
-*Apps with a 2D view arranged in the Windows Mixed Reality home*
+*Apps with a 2D view arranged in the physical environment*
 
 ## App lifecycle
 
