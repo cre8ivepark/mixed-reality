@@ -1,5 +1,5 @@
 ---
-title: Periodic Table of the Elements
+title: Bringing the Periodic Table of the Elements app to HoloLens 2 with MRTK v2
 description: Periodic Table of the Elements is an open-source sample app from Microsoft's Mixed Reality Design Labs where you can learn how to lay out an array of objects in 3D space with various surface types using an Object collection.
 author: cre8ivepark
 ms.author: dongpark
@@ -10,22 +10,38 @@ keywords: Windows Mixed Reality, design, sample app, controls
 
 
 
-# Periodic Table of the Elements
+# Bringing the Periodic Table of the Elements app to HoloLens 2 with MRTK v2
+Sharing the story of updating HoloLens app made with HoloToolkit(HTK) to use new Mixed Reality Toolkit v2(MRTK) which supports HoloLens 2's articulated hand tracking and eye tracking input
 
 >[!NOTE]
 >This article discusses an exploratory sample we’ve created in the [Mixed Reality Design Labs](https://github.com/Microsoft/MRDesignLabs_Unity), a place where we share our learnings about and suggestions for mixed reality app development. Our design-related articles and code will evolve as we make new discoveries.
 
-[Periodic Table of the Elements](https://github.com/Microsoft/MRDesignLabs_Unity_PeriodicTable) is a open-source sample app from Microsoft's Mixed Reality Design Labs. With this project, you can learn how to lay out an array of objects in 3D space with various surface types using an **[Object collection](object-collection.md)**. Also learn how to create interactable objects that respond to standard inputs from HoloLens. You can use this project's components to create your own mixed reality app experience.
+[Periodic Table of the Elements](https://github.com/Microsoft/MRDesignLabs_Unity_PeriodicTable) is a open-source sample app from Microsoft's Mixed Reality Design Labs. The project, demonstrates how to use MRTK's building blocks to create HoloLens and Windows Mixed Reality experiences.
+
+We published Mixed Reality Design Lab's Periodic Table of the Elements app for HoloLens and immersive headset back in 2015 to demonstrate how to create an end-to-end experience using HoloToolkit's building blocks. To fully leverage new articulated hand tracking and eye tracking input on HoloLens 2, we need to update HoloToolkit(HTK) to newly released Mixed Reality Toolkit(MRTK) v2.
+
 
 ![Period Table of the Elements app](images/640px-periodictable-hero.jpg)
 
-## About the app
+## What is MRTK v2?
 
-Periodic Table of the Elements visualizes the chemical elements and each of their properties in a 3D space. It incorporates the basic interactions of HoloLens such as gaze and air tap. Users can learn about the elements with animated 3D models. They can visually understand an element's electron shell and its nucleus - which is composed of protons and neutrons.
+MRTK is a Microsoft driven open source project. MRTK-Unity provides a set of foundational components and features to accelerate mixed reality app development in Unity. The latest Release of MRTK v2 supports HoloLens/HoloLens 2, Windows Mixed Reality, and OpenVR platforms.
+Since MRTK v2 is completely redesigned from the ground up, foundational components such as input system are not compatible with HoloToolkit. Because of this, you need to put some effort to upgrade HoloToolkit to MRTK. In this story, I'll show you how I updated HoloToolkit to MRTK and evolved the design to fully leverage hand tracking and eye tracking input.
 
-## Background
+## Getting new MRTK release packages
 
-After I first experienced HoloLens, a periodic table app was an idea I knew that I wanted to experiment with in mixed reality. Since each element has many data points that are displayed with text, I thought it would be great subject matter for exploring typographic composition in a 3D space. Being able to visualize the element's electron model was another interesting part of this project.
+From MRTK GitHub repository, you can download MRTK release packages under 'Release' menu. You can also clone the repository. The branch name for the MRTK v2 is mrtk_release. If you want to get the latest features and components under active development, you can use mrtk_development branch. However, please keep in mind that development branch could be unstable and something might be broken.
+
+![Release packages on MRTK GitHub]()
+
+![MRTK release packages]()
+
+There are two types of release packages. Foundation and Examples. Foundation package has core features and input system of MRTK. Optional Examples package contains example scenes and scripts that demonstrate the use of core features in the Foundation package. In the example scenes, you will be able to play with various types of new interaction building blocks and UI components. Below is one of the example scenes you can find in the Examples package.
+
+>[!VIDEO https://www.youtube.com/embed/zCPiZlWdVws]
+
+Since we only need foundational components and building blocks for the project, we can download the Foundation package.
+
 
 ## Design
 
