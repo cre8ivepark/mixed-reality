@@ -37,13 +37,14 @@ Because of the characteristics of holographic displays, a large bright area on t
 [TODO: Image - prominent white window vs dark window through hololens display]
 
 ## Design guidelines
-**Use dark color for the UI background **
+
+**Use dark color for the UI background**
 
 By using the dark color scheme, you can minimize the eye fatigue and improve the confidence on direct hand interactions. 
 
 [TODO: Image - Start menu and Settings] 
 
-**Use semibold or bold font weight **
+**Use semibold or bold font weight**
 
 HoloLens allows your experience to show beautiful high-resolution text. However, it is recommended to avoid thin font families such as light or semi-light because the vertical strokes can jitter in small font size. 
 
