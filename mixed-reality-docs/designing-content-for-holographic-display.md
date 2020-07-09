@@ -70,13 +70,13 @@ If your project must use transparent objects, try to minimize the number of pixe
 
 General recommendation:  Design scenes so that no pixel is rendered more than once.
 
-**Hologram stability issue with Depth LSR technology  **
+**Hologram stability issue with Depth LSR technology**
 
 To improve holographic reprojection, or hologram stability, an application can submit a depth buffer to the system for every rendered frame. When using the depth buffer for reprojection one rule is that for every color pixel rendered a corresponding depth value must be written to the depth buffer (and any pixel with a depth value should also have color value). If the above guidance is not followed, areas of the rendered image that lack valid depth information may be reprojected in a way that produces artifacts (often visible as a wave-like distortion). 
 
 
 ## Design guidelines
-**Use opaque UI background **
+**Use opaque UI background**
 
 By default, transparent or translucent objects do not write depth to allow for proper blending. Ways to mitigate this issue include, using opaque objects, ensuring translucent objects appear close to opaque objects (such as a translucent button in front of an opaque backplate), forcing translucent objects to write depth (not applicable in all scenarios), or rendering proxy objects which only contribute depth values at the end of the frame. 
 
