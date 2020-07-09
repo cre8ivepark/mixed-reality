@@ -83,6 +83,7 @@ Solutions within MRTK-Unity: https://microsoft.github.io/MixedRealityToolkit-Uni
 By using a solid and opaque backplate, we can secure legibility and interaction confidence.
 
 **Minimize the number of pixels affected**
+
 If your project must use transparent objects, try to minimize the number of pixels affected. For example, if an object is only visible under certain conditions (like an additive glow effect), disable the object when it is fully invisible (instead of setting the additive color to black). For simple 2D shapes created using a quad with an alpha mask, consider creating a mesh representation of the shape with an opaque shader instead. 
 
 ---
