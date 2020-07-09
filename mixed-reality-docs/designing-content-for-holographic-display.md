@@ -66,8 +66,6 @@ Since holographic objects are blended with the physical environment, the legibil
 
 For transparent or translucent objects to render correctly they must be sorted and blended with any objects which exist in the background. Sorting of transparent objects has a modest CPU cost, blending has considerable GPU cost because it does not allow the GPU to perform hidden surface removal via z-culling (i.e depth testing). Not allowing hidden surface removal increases the number of operations that need to be computed for the final rendered pixel, and thus puts more pressure on fill rate constraints. 
 
-If your project must use transparent objects, try to minimize the number of pixels affected.  For example, if an object is only visible under certain conditions (like an additive glow effect), disable the object when it is fully invisible (instead of setting the additive color to black).  For simple 2D shapes created using a quad with an alpha mask, consider creating a mesh representation of the shape with an opaque shader instead. 
-
 General recommendation:  Design scenes so that no pixel is rendered more than once.
 
 **Hologram stability issue with Depth LSR technology**
@@ -83,6 +81,9 @@ By default, transparent or translucent objects do not write depth to allow for p
 Solutions within MRTK-Unity: https://microsoft.github.io/MixedRealityToolkit-Unity/Documentation/hologram-stabilization.html#depth-buffer-sharing-in-unity  
 
 By using a solid and opaque backplate, we can secure legibility and interaction confidence.
+
+**Minimize the number of pixels affected**
+If your project must use transparent objects, try to minimize the number of pixels affected. For example, if an object is only visible under certain conditions (like an additive glow effect), disable the object when it is fully invisible (instead of setting the additive color to black). For simple 2D shapes created using a quad with an alpha mask, consider creating a mesh representation of the shape with an opaque shader instead. 
 
 ---
 
