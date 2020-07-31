@@ -22,8 +22,6 @@ Based on our user research and testing on various types of HoloLens experiences,
 
 Since holographic display is additive, bright color uses more light to display holograms. Bright, solid color in a large area of the display can easily cause eye fatigue for the user. 
 
-[TODO: Image - large area with strong white color]
-
 **Hand occlusion** 
 
 Bright color makes it difficult for the user to see their hands when directly interacting with objects. Since the user cannot see their hands, it becomes difficult to perceive the depth/distance between the hand/finger to the target surface. The Finger Cursor helps compensate for this issue, but it can still be challenging on a bright white surface. 
@@ -33,8 +31,6 @@ Bright color makes it difficult for the user to see their hands when directly in
 **Color uniformity**
 
 Because of the characteristics of holographic displays, a large bright area on the display can become blotchy. By using dark color scheme, you can minimize this issue. 
-
-[TODO: Image - prominent white window vs dark window through hololens display]
 
 ## Design guidelines
 
@@ -64,19 +60,17 @@ Since holographic objects are blended with the physical environment, the legibil
 
 **Performance**
 
-For transparent or translucent objects to render correctly they must be sorted and blended with any objects which exist in the background. Sorting of transparent objects has a modest CPU cost, blending has considerable GPU cost because it does not allow the GPU to perform hidden surface removal via z-culling (i.e depth testing). Not allowing hidden surface removal increases the number of operations that need to be computed for the final rendered pixel, and thus puts more pressure on fill rate constraints. 
-
-General recommendation:  Design scenes so that no pixel is rendered more than once.
+For transparent or translucent objects to render correctly they must be sorted and blended with any objects which exist in the background. Sorting of transparent objects has a modest CPU cost, blending has considerable GPU cost because it does not allow the GPU to perform hidden surface removal via z-culling (i.e depth testing). Not allowing hidden surface removal increases the number of operations that need to be computed for the final rendered pixel, and thus puts more pressure on fill rate constraints.
 
 **Hologram stability issue with Depth LSR technology**
 
-To improve holographic reprojection, or hologram stability, an application can submit a depth buffer to the system for every rendered frame. When using the depth buffer for reprojection one rule is that for every color pixel rendered a corresponding depth value must be written to the depth buffer (and any pixel with a depth value should also have color value). If the above guidance is not followed, areas of the rendered image that lack valid depth information may be reprojected in a way that produces artifacts (often visible as a wave-like distortion). 
+To improve holographic reprojection, or hologram stability, an application can submit a depth buffer to the system for every rendered frame. When using the depth buffer for reprojection one rule is that for every color pixel rendered a corresponding depth value must be written to the depth buffer (and any pixel with a depth value should also have color value). If the above guidance is not followed, areas of the rendered image that lack valid depth information may be reprojected in a way that produces artifacts (often visible as a wave-like distortion).
 
 
 ## Design guidelines
 **Use opaque UI background**
 
-By default, transparent or translucent objects do not write depth to allow for proper blending. Ways to mitigate this issue include, using opaque objects, ensuring translucent objects appear close to opaque objects (such as a translucent button in front of an opaque backplate), forcing translucent objects to write depth (not applicable in all scenarios), or rendering proxy objects which only contribute depth values at the end of the frame. 
+By default, transparent or translucent objects do not write depth to allow for proper blending. Ways to mitigate this issue include, using opaque objects, ensuring translucent objects appear close to opaque objects (such as a translucent button in front of an opaque backplate), forcing translucent objects to write depth (not applicable in all scenarios), or rendering proxy objects which only contribute depth values at the end of the frame.
 
 Solutions within MRTK-Unity: https://microsoft.github.io/MixedRealityToolkit-Unity/Documentation/hologram-stabilization.html#depth-buffer-sharing-in-unity  
 
