@@ -15,7 +15,7 @@ When designing content for holographic displays, there are several elements that
 
 <br>
 
-## Challenges with bright imagery 
+## Challenges with bright color on a large surface 
 Based on our user research and testing on various types of HoloLens experiences, we found that using bright colors in a large area of the display can cause several issues: 
 
 **Eye fatigue** 
