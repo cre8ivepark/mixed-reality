@@ -26,7 +26,7 @@ Since holographic display is additive, bright color uses more light to display h
 
 Bright color makes it difficult for the user to see their hands when directly interacting with objects. Since the user cannot see their hands, it becomes difficult to perceive the depth/distance between the hand/finger to the target surface. The Finger Cursor helps compensate for this issue, but it can still be challenging on a bright white surface. 
 
-[TODO: Image - Dark & Bright theme with hand interactions]
+![Color and hand occlusion](images/color_handocclusion.jpg)
 
 **Color uniformity**
 
