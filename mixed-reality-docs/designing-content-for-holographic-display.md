@@ -39,7 +39,8 @@ Because of the characteristics of holographic displays, a large bright area on t
 
 By using the dark color scheme, you can minimize the eye fatigue and improve the confidence on direct hand interactions. 
 
-[TODO: Image - Start menu and Settings] 
+![Dark UI examples](images/color_dark_examples.jpg)
+*Difficult to see the hand on the bright colored content backplate*
 
 **Use semibold or bold font weight**
 
