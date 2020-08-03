@@ -40,7 +40,7 @@ Because of the characteristics of holographic displays, a large bright area on t
 By using the dark color scheme, you can minimize the eye fatigue and improve the confidence on direct hand interactions. 
 
 ![Dark UI examples](images/color_dark_examples.jpg)
-*Difficult to see the hand on the bright colored content backplate*
+*Examples of dark color used for the content background*
 
 **Use semibold or bold font weight**
 
@@ -54,7 +54,8 @@ The HolographicBackplate material is applied to several UI panels in the HoloLen
 
 
 ## Challenges with transparent or translucent UI backplate 
-[TODO: Image - plated vs unplated]
+![Transparent UI examples](images/color_transparent_examples.jpg)
+*Examples of transparent UI backplate*
 
 **Visual complexity and accessibility**
 
