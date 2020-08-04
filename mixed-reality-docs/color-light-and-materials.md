@@ -23,8 +23,6 @@ Content rendered in immersive headsets will appear visually different when compa
 
 Always take time to test your holographic experiences in a holographic headset. The appearance of content, even if it is built specifically for holographic devices, will differ as seen on secondary monitors, snapshots, and in spectator view. Remember to walk around experiences with a device, testing the lighting of holograms and observing from all sides (as well as from above and below) how your content is rendered. Be sure to test at a range of brightness settings on the device, as it is unlikely all users will share an assumed default, as well as a diverse set of lighting conditions.
 
-[TODO: Image - Start menu, Slate, and live cube on HoloLens vs WMR]
-
 ## Fundamentals of rendering on holographic devices
 * **Holographic devices have additive displays** – Holograms are created by adding light to the light from the real world – white will appear brightly, while black will appear transparent.
 
@@ -40,8 +38,6 @@ Due to the nature of additive displays, certain colors can appear different on h
 
 * **Rendering dark colors** - Due to the nature of additive displays, dark colors appear transparent. A solid black object will appear no different from the real world. See Alpha channel below. To give the appearance of “black” try a very dark grey RGB value such as 16,16,16.
 
-[TODO: Image of dark gray window examples - Settings, Store app]
-
 * **Color uniformity** - Typically holograms are rendered brightly enough so that they maintain color uniformity, regardless of the background. Large areas may become blotchy. Avoid large regions of bright, solid color.
 
 * **Gamut** - HoloLens benefits from a "wide gamut" of color, conceptually similar to Adobe RGB. As a result, some colors can exhibit different qualities and representation in the device.
@@ -50,14 +46,17 @@ Due to the nature of additive displays, certain colors can appear different on h
 
 * **Color separation** - Also called "color breakup" or "color fringing", color separation most commonly occurs with moving holograms (including cursor) when a user tracks objects with their eyes.
 
-
-
 ## Technical considerations
 * **Aliasing** - Be considerate of aliasing, jagged or “stair steps” where the edge of a hologram’s geometry meets the real world. Using textures with high detail can aggravate this effect. Textures should be mapped and filtering enabled. Consider fading the edges of holograms or adding a texture that creates a black edge border around objects. Avoid thin geometry where possible.
 
 * **Alpha channel** - You must clear your alpha channel to fully transparent for any parts where you are not rendering a hologram. Leaving the alpha undefined leads to visual artifacts when taking images/videos from the device or with Spectator View.
 
 * **Texture softening** - Since light is additive in holographic displays, it is best to avoid large regions of bright, solid color as they often do not produce the intended visual effect.
+
+## Design guidelines for holographic display
+![Color and hand occlusion](images/color_handocclusion.jpg)
+
+When designing content for holographic displays, there are several elements that you need to consider achieving the best experience. Please visit [Designing content for holographic display](designing-content-for-holographic-display.md) for the guidelines and recommendations.
 
 ## Storytelling with light and color
 
@@ -95,6 +94,7 @@ Materials are crucial elements for making realistic holograms. By providing prop
 ---
 
 ## See also
+* [Designing content for holographic display](designing-content-for-holographic-display.md)
 * [Color Separation](hologram-stability.md#color-separation)
 * [Holograms](hologram.md)
 * [Microsoft Design Language - color](https://www.microsoft.com/design/color)
