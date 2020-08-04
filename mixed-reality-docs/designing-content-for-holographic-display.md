@@ -44,9 +44,10 @@ By using the dark color scheme, you can minimize the eye fatigue and improve the
 
 **Use semibold or bold font weight**
 
-HoloLens allows your experience to show beautiful high-resolution text. However, it is recommended to avoid thin font families such as light or semi-light because the vertical strokes can jitter in small font size. 
+HoloLens allows your experience to show beautiful high-resolution text. However, it is recommended to avoid thin font weight such as light or semi-light because the vertical strokes can jitter in small font size. 
 
-[TODO: Image - light vs semibold font example]
+![Dark UI examples](images/color_font_examples.jpg)
+*Bold or semi-bold font weight (upper panel) improves the legibility*
 
 **Use MRTK’s HolographicBackplate material**
 
@@ -83,7 +84,9 @@ By using a solid and opaque backplate, we can secure legibility and interaction 
 
 If your project must use transparent objects, try to minimize the number of pixels affected. For example, if an object is only visible under certain conditions (like an additive glow effect), disable the object when it is fully invisible (instead of setting the additive color to black). For simple 2D shapes created using a quad with an alpha mask, consider creating a mesh representation of the shape with an opaque shader instead. 
 
+<br/>
 ---
+<br/>
 
 ## Dark UI examples in MRTK (Mixed Reality Toolkit) for Unity
 **[MRTK](https://github.com/Microsoft/MixedRealityToolkit-Unity)** provides many UI building block examples based on the dark color schemes.
